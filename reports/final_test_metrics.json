@@ -1,0 +1,189 @@
+{
+  "configuration": "count3_confidence_maximum",
+  "freeze_manifest": "docs/frozen_config.json",
+  "freeze_sha256": "f25fba1ae7cdb3db8bbff70fdb89a48cfd1c33c5353df904eed36dcdb80e83f4",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "training_catalog_product_counts": {
+    "head": 350,
+    "middle": 1050,
+    "tail": 2100
+  },
+  "sensitivity_training_catalog_product_counts": {
+    "head": 358,
+    "middle": 1071,
+    "tail": 2143
+  },
+  "primary": {
+    "invoices": 3205,
+    "baseline_hits": 64,
+    "association_only_hits": 589,
+    "combined_hits": 589,
+    "known_targets": 2852,
+    "known_target_baseline_hits": 64,
+    "known_target_association_only_hits": 589,
+    "known_target_combined_hits": 589,
+    "association_coverage_invoices": 3148,
+    "full_five_association_invoices": 3147,
+    "any_fallback_invoices": 58,
+    "full_fallback_invoices": 57,
+    "fewer_than_five_invoices": 0,
+    "groups": {
+      "head": {
+        "invoices": 1132,
+        "baseline_hits": 64,
+        "association_only_hits": 274,
+        "combined_hits": 274
+      },
+      "middle": {
+        "invoices": 1083,
+        "baseline_hits": 0,
+        "association_only_hits": 238,
+        "combined_hits": 238
+      },
+      "tail": {
+        "invoices": 637,
+        "baseline_hits": 0,
+        "association_only_hits": 77,
+        "combined_hits": 77
+      },
+      "unseen": {
+        "invoices": 353,
+        "baseline_hits": 0,
+        "association_only_hits": 0,
+        "combined_hits": 0
+      }
+    },
+    "unseen_targets": 353,
+    "catalog_coverage": 0.8898595943837754,
+    "known_target_baseline_hit_rate_at_5": 0.02244039270687237,
+    "known_target_association_only_hit_rate_at_5": 0.20652173913043478,
+    "known_target_combined_hit_rate_at_5": 0.20652173913043478,
+    "baseline_hit_rate_at_5": 0.019968798751950078,
+    "association_only_hit_rate_at_5": 0.18377535101404055,
+    "combined_hit_rate_at_5": 0.18377535101404055,
+    "difference_from_popularity": 0.16380655226209048,
+    "association_coverage": 0.9822152886115445,
+    "any_fallback_rate": 0.018096723868954757,
+    "full_fallback_rate": 0.017784711388455537,
+    "paired_cluster_bootstrap_95pct_difference": [
+      0.1497612282367047,
+      0.1784545168611839
+    ]
+  },
+  "sensitivity": {
+    "under_100": {
+      "invoices": 3205,
+      "baseline_hits": 64,
+      "association_only_hits": 553,
+      "combined_hits": 553,
+      "known_targets": 2856,
+      "known_target_baseline_hits": 64,
+      "known_target_association_only_hits": 553,
+      "known_target_combined_hits": 553,
+      "association_coverage_invoices": 3150,
+      "full_five_association_invoices": 3149,
+      "any_fallback_invoices": 56,
+      "full_fallback_invoices": 55,
+      "fewer_than_five_invoices": 0,
+      "groups": {
+        "head": {
+          "invoices": 1140,
+          "baseline_hits": 64,
+          "association_only_hits": 271,
+          "combined_hits": 271
+        },
+        "middle": {
+          "invoices": 1081,
+          "baseline_hits": 0,
+          "association_only_hits": 213,
+          "combined_hits": 213
+        },
+        "tail": {
+          "invoices": 635,
+          "baseline_hits": 0,
+          "association_only_hits": 69,
+          "combined_hits": 69
+        },
+        "unseen": {
+          "invoices": 349,
+          "baseline_hits": 0,
+          "association_only_hits": 0,
+          "combined_hits": 0
+        }
+      },
+      "unseen_targets": 349,
+      "catalog_coverage": 0.8911076443057723,
+      "known_target_baseline_hit_rate_at_5": 0.022408963585434174,
+      "known_target_association_only_hit_rate_at_5": 0.19362745098039216,
+      "known_target_combined_hit_rate_at_5": 0.19362745098039216,
+      "baseline_hit_rate_at_5": 0.019968798751950078,
+      "association_only_hit_rate_at_5": 0.17254290171606865,
+      "combined_hit_rate_at_5": 0.17254290171606865,
+      "difference_from_popularity": 0.15257410296411855,
+      "association_coverage": 0.982839313572543,
+      "any_fallback_rate": 0.01747269890795632,
+      "full_fallback_rate": 0.0171606864274571,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.13897802187499164,
+        0.16651465544122232
+      ]
+    },
+    "100_to_199": {
+      "invoices": 64,
+      "baseline_hits": 1,
+      "association_only_hits": 4,
+      "combined_hits": 4,
+      "known_targets": 61,
+      "known_target_baseline_hits": 1,
+      "known_target_association_only_hits": 4,
+      "known_target_combined_hits": 4,
+      "association_coverage_invoices": 64,
+      "full_five_association_invoices": 64,
+      "any_fallback_invoices": 0,
+      "full_fallback_invoices": 0,
+      "fewer_than_five_invoices": 0,
+      "groups": {
+        "head": {
+          "invoices": 20,
+          "baseline_hits": 1,
+          "association_only_hits": 2,
+          "combined_hits": 2
+        },
+        "middle": {
+          "invoices": 27,
+          "baseline_hits": 0,
+          "association_only_hits": 2,
+          "combined_hits": 2
+        },
+        "tail": {
+          "invoices": 14,
+          "baseline_hits": 0,
+          "association_only_hits": 0,
+          "combined_hits": 0
+        },
+        "unseen": {
+          "invoices": 3,
+          "baseline_hits": 0,
+          "association_only_hits": 0,
+          "combined_hits": 0
+        }
+      },
+      "unseen_targets": 3,
+      "catalog_coverage": 0.953125,
+      "known_target_baseline_hit_rate_at_5": 0.01639344262295082,
+      "known_target_association_only_hit_rate_at_5": 0.06557377049180328,
+      "known_target_combined_hit_rate_at_5": 0.06557377049180328,
+      "baseline_hit_rate_at_5": 0.015625,
+      "association_only_hit_rate_at_5": 0.0625,
+      "combined_hit_rate_at_5": 0.0625,
+      "difference_from_popularity": 0.046875,
+      "association_coverage": 1.0,
+      "any_fallback_rate": 0.0,
+      "full_fallback_rate": 0.0,
+      "paired_cluster_bootstrap_95pct_difference": [
+        -0.015873015873015872,
+        0.125
+      ]
+    }
+  }
+}

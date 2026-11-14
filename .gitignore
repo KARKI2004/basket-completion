@@ -1,0 +1,39 @@
+# Local environment and Python caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local data and database sidecars
+data/raw/**
+data/processed/**
+reports/figures/*.svg
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.db
+*.db-*
+
+# Local notes, diagnostics, and secrets
+/context.md
+/docs/PROGRESS.md
+/docs/UI_HANDOFF.md
+*.log
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Operating-system files
+.DS_Store
+._*
+Thumbs.db

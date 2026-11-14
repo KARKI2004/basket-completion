@@ -1,0 +1,294 @@
+{
+  "source": {
+    "path": "data/raw/Online Retail.xlsx",
+    "bytes": 23715344,
+    "sha256_before": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+    "sha256_after": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+    "sheets": [
+      {
+        "name": "Online Retail",
+        "rows_including_header": 541910,
+        "columns": 8
+      }
+    ],
+    "columns": [
+      "InvoiceNo",
+      "StockCode",
+      "Description",
+      "Quantity",
+      "InvoiceDate",
+      "UnitPrice",
+      "CustomerID",
+      "Country"
+    ],
+    "pandas_dtypes": {
+      "InvoiceNo": "object",
+      "StockCode": "object",
+      "Description": "object",
+      "Quantity": "int64",
+      "InvoiceDate": "datetime64[us]",
+      "UnitPrice": "float64",
+      "CustomerID": "float64",
+      "Country": "str"
+    },
+    "loaded_value_types": {
+      "InvoiceNo": {
+        "int": 532618,
+        "str": 9291
+      },
+      "StockCode": {
+        "int": 487036,
+        "str": 54873
+      }
+    }
+  },
+  "raw": {
+    "rows": 541909,
+    "distinct_invoices": 25900,
+    "distinct_stock_codes": 4070,
+    "distinct_known_customers": 4372,
+    "missing_values": {
+      "InvoiceNo": 0,
+      "StockCode": 0,
+      "Description": 1454,
+      "Quantity": 0,
+      "InvoiceDate": 0,
+      "UnitPrice": 0,
+      "CustomerID": 135080,
+      "Country": 0
+    },
+    "exact_duplicate_rows": 5268,
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00",
+    "monthly_invoice_counts_earliest_timestamp": {
+      "2010-12": 2025,
+      "2011-01": 1476,
+      "2011-02": 1393,
+      "2011-03": 1983,
+      "2011-04": 1744,
+      "2011-05": 2162,
+      "2011-06": 2012,
+      "2011-07": 1927,
+      "2011-08": 1737,
+      "2011-09": 2327,
+      "2011-10": 2637,
+      "2011-11": 3462,
+      "2011-12": 1015
+    }
+  },
+  "raw_flags": {
+    "cancellation_prefix": 9288,
+    "nonpositive_quantity": 10624,
+    "nonpositive_price": 2517,
+    "missing_description": 1454,
+    "union_primary_three": 11805,
+    "union_all_four": 11805,
+    "cancellation_invoice_ids": 3836,
+    "nonpositive_quantity_invoice_ids": 5172,
+    "nonpositive_price_invoice_ids": 2157
+  },
+  "raw_invoice_anomalies": {
+    "multiple_timestamps": 43,
+    "multiple_known_customer_ids": 0,
+    "mixed_missing_and_known_customer_ids": 0,
+    "multi_timestamp_rows": 3347,
+    "multi_timestamp_cross_calendar_date": 0,
+    "multi_timestamp_max_span_minutes": 1.0
+  },
+  "raw_invoice_identifier_forms": {
+    "numeric_rows": 532618,
+    "numeric_invoice_ids": 22061,
+    "C_digits_rows": 9288,
+    "C_digits_invoice_ids": 3836,
+    "other_rows": 3,
+    "other_invoice_ids": 3,
+    "other_examples": [
+      "A563185",
+      "A563186",
+      "A563187"
+    ]
+  },
+  "provisional_positive_purchase": {
+    "definition": "InvoiceNo does not begin C; Quantity > 0; UnitPrice > 0. No code, customer, or basket-size exclusions.",
+    "rows": 530104,
+    "distinct_invoices": 19960,
+    "distinct_stock_codes": 3922,
+    "distinct_known_customers": 4338,
+    "missing_values": {
+      "InvoiceNo": 0,
+      "StockCode": 0,
+      "Description": 0,
+      "Quantity": 0,
+      "InvoiceDate": 0,
+      "UnitPrice": 0,
+      "CustomerID": 132220,
+      "Country": 0
+    },
+    "exact_duplicate_rows": 5226,
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00",
+    "monthly_invoice_counts_earliest_timestamp": {
+      "2010-12": 1559,
+      "2011-01": 1086,
+      "2011-02": 1100,
+      "2011-03": 1454,
+      "2011-04": 1246,
+      "2011-05": 1681,
+      "2011-06": 1533,
+      "2011-07": 1475,
+      "2011-08": 1361,
+      "2011-09": 1837,
+      "2011-10": 2040,
+      "2011-11": 2769,
+      "2011-12": 819
+    },
+    "distinct_invoice_product_presences": 519602,
+    "repeated_lines_collapsed_for_presence": 10502,
+    "single_product_invoices": 1641,
+    "multi_product_invoices": 18319,
+    "basket_size_distinct_products": {
+      "min": 1,
+      "median": 15.0,
+      "p90": 52.0,
+      "p99": 217.40999999999985,
+      "max": 1110
+    },
+    "total_possible_unordered_product_pairs": 28531398,
+    "large_baskets_at_least": {
+      "100": {
+        "invoices": 637,
+        "distinct_product_presences": 141146,
+        "presence_share": 0.2716425263952025,
+        "possible_pairs": 21780936,
+        "possible_pair_share": 0.7634023401166673
+      },
+      "200": {
+        "invoices": 236,
+        "distinct_product_presences": 84056,
+        "presence_share": 0.16176997009249386,
+        "possible_pairs": 17571806,
+        "possible_pair_share": 0.6158760955211519
+      }
+    },
+    "top_product_frequency_distinct_baskets": [
+      {
+        "stock_code": "85123A",
+        "baskets": 2198,
+        "positive_rows": 2265
+      },
+      {
+        "stock_code": "85099B",
+        "baskets": 2089,
+        "positive_rows": 2112
+      },
+      {
+        "stock_code": "22423",
+        "baskets": 1988,
+        "positive_rows": 2017
+      },
+      {
+        "stock_code": "47566",
+        "baskets": 1685,
+        "positive_rows": 1706
+      },
+      {
+        "stock_code": "20725",
+        "baskets": 1565,
+        "positive_rows": 1595
+      },
+      {
+        "stock_code": "84879",
+        "baskets": 1455,
+        "positive_rows": 1489
+      },
+      {
+        "stock_code": "22197",
+        "baskets": 1392,
+        "positive_rows": 1426
+      },
+      {
+        "stock_code": "22720",
+        "baskets": 1385,
+        "positive_rows": 1399
+      },
+      {
+        "stock_code": "21212",
+        "baskets": 1320,
+        "positive_rows": 1370
+      },
+      {
+        "stock_code": "22383",
+        "baskets": 1284,
+        "positive_rows": 1326
+      }
+    ],
+    "missing_customer_rows": 132220,
+    "invoices_with_missing_customer_id": 1428,
+    "candidate_non_merchandise_rows": 2300,
+    "candidate_non_merchandise_invoices": 2265,
+    "candidate_non_merchandise_by_code": [
+      {
+        "code": "AMAZONFEE",
+        "rows": 2,
+        "invoices": 2,
+        "description": "AMAZON FEE"
+      },
+      {
+        "code": "B",
+        "rows": 1,
+        "invoices": 1,
+        "description": "Adjust bad debt"
+      },
+      {
+        "code": "C2",
+        "rows": 141,
+        "invoices": 141,
+        "description": "CARRIAGE"
+      },
+      {
+        "code": "DOT",
+        "rows": 706,
+        "invoices": 706,
+        "description": "DOTCOM POSTAGE"
+      },
+      {
+        "code": "M",
+        "rows": 322,
+        "invoices": 290,
+        "description": "Manual"
+      },
+      {
+        "code": "POST",
+        "rows": 1126,
+        "invoices": 1126,
+        "description": "POSTAGE"
+      },
+      {
+        "code": "S",
+        "rows": 2,
+        "invoices": 2,
+        "description": "SAMPLES"
+      }
+    ],
+    "stock_codes_with_multiple_descriptions": 220,
+    "uppercase_code_groups_with_case_variants": 110,
+    "unusual_stock_identifier_rows": 2762,
+    "unusual_stock_identifier_codes": 24,
+    "invoice_anomalies": {
+      "multiple_timestamps": 42,
+      "multiple_known_customer_ids": 0,
+      "mixed_missing_and_known_customer_ids": 0,
+      "multi_timestamp_rows": 3344,
+      "multi_timestamp_cross_calendar_date": 0,
+      "multi_timestamp_max_span_minutes": 1.0
+    }
+  },
+  "notes": [
+    "Counts of flags overlap; union_primary_three is the number of rows removed by the provisional filter.",
+    "Invoice counts use distinct InvoiceNo, not rows or CustomerID.",
+    "Basket size and product frequency use distinct invoice-product presence.",
+    "Monthly invoice counts assign each invoice to its earliest observed timestamp for descriptive audit only; split policy remains pending.",
+    "Possible pairs are n*(n-1)/2 per distinct-product invoice, not observed association counts.",
+    "Questionable-code CSV is a code-level review list, not an exclusion list."
+  ]
+}

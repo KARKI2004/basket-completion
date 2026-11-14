@@ -1,0 +1,54 @@
+{
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "raw_rows": 541909,
+  "raw_invoices": 25900,
+  "positive_rows": 530104,
+  "positive_invoices": 19960,
+  "excluded_nonmerchandise_rows": 2300,
+  "merchandise_rows": 527804,
+  "merchandise_invoices": 19784,
+  "distinct_invoice_product_presences": 517334,
+  "single_product_invoices": 1511,
+  "multi_product_invoices": 18273,
+  "multi_product_presences": 515823,
+  "multi_product_unique_products": 3906,
+  "multi_product_possible_pairs": 28373891,
+  "excluded_at_least_100_products": 636,
+  "excluded_large_baskets_by_split": {
+    "train": {
+      "invoices": 376,
+      "product_presences": 78828,
+      "possible_pairs": 10792709
+    },
+    "validation": {
+      "invoices": 140,
+      "product_presences": 27132,
+      "possible_pairs": 3409989
+    },
+    "test": {
+      "invoices": 120,
+      "product_presences": 34643,
+      "possible_pairs": 7457562
+    }
+  },
+  "split_boundary_crossers": 0,
+  "splits": {
+    "train": {
+      "baskets": 11000,
+      "product_presences": 226942
+    },
+    "validation": {
+      "baskets": 3432,
+      "product_presences": 78407
+    },
+    "test": {
+      "baskets": 3205,
+      "product_presences": 69871
+    }
+  },
+  "primary_product_presences": 375220,
+  "primary_unique_products": 3763,
+  "primary_possible_pairs": 6713631,
+  "training_catalog_products": 3500,
+  "training_popularity_total_basket_votes": 226942
+}

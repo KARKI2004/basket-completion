@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basket-completion"
+version = "0.1.0"
+description = "Offline basket completion case study"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.0", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.8"]
+figures = ["matplotlib>=3.9"]
+demo = ["streamlit>=1.66"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

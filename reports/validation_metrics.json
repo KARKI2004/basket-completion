@@ -1,0 +1,5034 @@
+{
+  "scope": "validation_only",
+  "training_baskets": 11000,
+  "training_distinct_pairs": 1300982,
+  "training_catalog_products": 3500,
+  "training_popularity_group_product_counts": {
+    "head": 350,
+    "middle": 1050,
+    "tail": 2100,
+    "unseen": 0
+  },
+  "validation_invoices": 3432,
+  "baseline_hits": 77,
+  "baseline_hit_rate_at_5": 0.022435897435897436,
+  "known_targets": 3106,
+  "unseen_targets": 326,
+  "catalog_coverage": 0.905011655011655,
+  "known_target_baseline_hits": 77,
+  "known_target_baseline_hit_rate_at_5": 0.024790727623953637,
+  "validation_target_groups": {
+    "head": {
+      "invoices": 1321,
+      "baseline_hits": 77,
+      "baseline_hit_rate_at_5": 0.0582891748675246
+    },
+    "middle": {
+      "invoices": 1137,
+      "baseline_hits": 0,
+      "baseline_hit_rate_at_5": 0.0
+    },
+    "tail": {
+      "invoices": 648,
+      "baseline_hits": 0,
+      "baseline_hit_rate_at_5": 0.0
+    },
+    "unseen": {
+      "invoices": 326,
+      "baseline_hits": 0,
+      "baseline_hit_rate_at_5": 0.0
+    }
+  },
+  "settings": [
+    {
+      "key": "count3_confidence_maximum",
+      "min_pair_count": 3,
+      "score": "confidence",
+      "aggregation": "maximum",
+      "denominator": 3432,
+      "combined_hits": 717,
+      "combined_hit_rate_at_5": 0.2089160839160839,
+      "difference_from_popularity": 0.1864801864801865,
+      "association_only_hits": 717,
+      "association_only_hit_rate_at_5": 0.2089160839160839,
+      "association_coverage_invoices": 3375,
+      "association_coverage": 0.9833916083916084,
+      "full_five_association_invoices": 3371,
+      "any_fallback_invoices": 61,
+      "any_fallback_rate": 0.017773892773892772,
+      "full_fallback_invoices": 57,
+      "full_fallback_rate": 0.016608391608391608,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 717,
+      "known_target_combined_hit_rate_at_5": 0.23084352865421764,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.17190318011266825,
+        0.20197238098228865
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 377,
+          "combined_hit_rate_at_5": 0.2853898561695685
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 254,
+          "combined_hit_rate_at_5": 0.2233948988566403
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 86,
+          "combined_hit_rate_at_5": 0.13271604938271606
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22386",
+                "visible_display_name": "JUMBO BAG PINK POLKADOT",
+                "pair_count": 501,
+                "support": 0.04554545454545455,
+                "confidence": 0.6706827309236948,
+                "lift": 6.34351680151388
+              }
+            },
+            {
+              "product": "22677",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 2",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 36,
+                "support": 0.0032727272727272726,
+                "confidence": 0.6545454545454545,
+                "lift": 78.26086956521739
+              }
+            },
+            {
+              "product": "22996",
+              "display_name": "TRAVEL CARD WALLET VINTAGE TICKET",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22994",
+                "visible_display_name": "TRAVEL CARD WALLET RETROSPOT",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.5795454545454546,
+                "lift": 34.45945945945946
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22662",
+                "visible_display_name": "LUNCH BAG DOLLY GIRL DESIGN",
+                "pair_count": 229,
+                "support": 0.02081818181818182,
+                "confidence": 0.5753768844221105,
+                "lift": 9.858482443369496
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22384",
+                "visible_display_name": "LUNCH BAG PINK POLKADOT",
+                "pair_count": 371,
+                "support": 0.03372727272727273,
+                "confidence": 0.5553892215568862,
+                "lift": 6.611776447105789
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22386",
+                "visible_display_name": "JUMBO BAG PINK POLKADOT",
+                "pair_count": 501,
+                "support": 0.04554545454545455,
+                "confidence": 0.6706827309236948,
+                "lift": 6.34351680151388
+              }
+            },
+            {
+              "product": "22677",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 2",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 36,
+                "support": 0.0032727272727272726,
+                "confidence": 0.6545454545454545,
+                "lift": 78.26086956521739
+              }
+            },
+            {
+              "product": "22996",
+              "display_name": "TRAVEL CARD WALLET VINTAGE TICKET",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22994",
+                "visible_display_name": "TRAVEL CARD WALLET RETROSPOT",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.5795454545454546,
+                "lift": 34.45945945945946
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22662",
+                "visible_display_name": "LUNCH BAG DOLLY GIRL DESIGN",
+                "pair_count": 229,
+                "support": 0.02081818181818182,
+                "confidence": 0.5753768844221105,
+                "lift": 9.858482443369496
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22384",
+                "visible_display_name": "LUNCH BAG PINK POLKADOT",
+                "pair_count": 371,
+                "support": 0.03372727272727273,
+                "confidence": 0.5553892215568862,
+                "lift": 6.611776447105789
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20894",
+              "display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE"
+            }
+          ],
+          "hidden_target": {
+            "product": "20893",
+            "display_name": "HANGING BAUBLE T-LIGHT HOLDER SMALL"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            },
+            {
+              "product": "22423",
+              "display_name": "REGENCY CAKESTAND 3 TIER",
+              "source": "popularity"
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "popularity"
+            },
+            {
+              "product": "47566",
+              "display_name": "PARTY BUNTING",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count3_confidence_sum",
+      "min_pair_count": 3,
+      "score": "confidence",
+      "aggregation": "sum",
+      "denominator": 3432,
+      "combined_hits": 411,
+      "combined_hit_rate_at_5": 0.11975524475524475,
+      "difference_from_popularity": 0.09731934731934731,
+      "association_only_hits": 411,
+      "association_only_hit_rate_at_5": 0.11975524475524475,
+      "association_coverage_invoices": 3375,
+      "association_coverage": 0.9833916083916084,
+      "full_five_association_invoices": 3371,
+      "any_fallback_invoices": 61,
+      "any_fallback_rate": 0.017773892773892772,
+      "full_fallback_invoices": 57,
+      "full_fallback_rate": 0.016608391608391608,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 411,
+      "known_target_combined_hit_rate_at_5": 0.13232453316162265,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.08488370349185977,
+        0.10942925174870428
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 305,
+          "combined_hit_rate_at_5": 0.23088569265707798
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 84,
+          "combined_hit_rate_at_5": 0.07387862796833773
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 22,
+          "combined_hit_rate_at_5": 0.033950617283950615
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.19672131147540983,
+                "lift": 2.34192037470726
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.19672131147540983,
+                "lift": 2.34192037470726
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20894",
+              "display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE"
+            }
+          ],
+          "hidden_target": {
+            "product": "20893",
+            "display_name": "HANGING BAUBLE T-LIGHT HOLDER SMALL"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            },
+            {
+              "product": "22423",
+              "display_name": "REGENCY CAKESTAND 3 TIER",
+              "source": "popularity"
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "popularity"
+            },
+            {
+              "product": "47566",
+              "display_name": "PARTY BUNTING",
+              "source": "popularity"
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 48,
+          "visible_excerpt": [
+            {
+              "product": "11001",
+              "display_name": "ASSTD DESIGN RACING CAR PEN"
+            },
+            {
+              "product": "15036",
+              "display_name": "ASSORTED COLOURS SILK FAN"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "85099B",
+            "47566",
+            "20725",
+            "22383"
+          ],
+          "association_top_five": [
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23346",
+                "visible_display_name": "SPACEBOY BEAKER",
+                "pair_count": 24,
+                "support": 0.002181818181818182,
+                "confidence": 0.5333333333333333,
+                "lift": 11.594202898550725
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 6.561940743686618
+              }
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22378",
+                "visible_display_name": "WALL TIDY RETROSPOT",
+                "pair_count": 38,
+                "support": 0.0034545454545454545,
+                "confidence": 0.3584905660377358,
+                "lift": 3.39071042684015
+              }
+            },
+            {
+              "product": "22630",
+              "display_name": "DOLLY GIRL LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.48936170212765956,
+                "lift": 12.151193506555881
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22374",
+                "visible_display_name": "AIRLINE BAG VINTAGE JET SET RED",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.23655913978494625,
+                "lift": 2.8161802355350742
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23346",
+                "visible_display_name": "SPACEBOY BEAKER",
+                "pair_count": 24,
+                "support": 0.002181818181818182,
+                "confidence": 0.5333333333333333,
+                "lift": 11.594202898550725
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 6.561940743686618
+              }
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22378",
+                "visible_display_name": "WALL TIDY RETROSPOT",
+                "pair_count": 38,
+                "support": 0.0034545454545454545,
+                "confidence": 0.3584905660377358,
+                "lift": 3.39071042684015
+              }
+            },
+            {
+              "product": "22630",
+              "display_name": "DOLLY GIRL LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.48936170212765956,
+                "lift": 12.151193506555881
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22374",
+                "visible_display_name": "AIRLINE BAG VINTAGE JET SET RED",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.23655913978494625,
+                "lift": 2.8161802355350742
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count3_lift_maximum",
+      "min_pair_count": 3,
+      "score": "lift",
+      "aggregation": "maximum",
+      "denominator": 3432,
+      "combined_hits": 307,
+      "combined_hit_rate_at_5": 0.08945221445221445,
+      "difference_from_popularity": 0.06701631701631702,
+      "association_only_hits": 307,
+      "association_only_hit_rate_at_5": 0.08945221445221445,
+      "association_coverage_invoices": 3375,
+      "association_coverage": 0.9833916083916084,
+      "full_five_association_invoices": 3371,
+      "any_fallback_invoices": 61,
+      "any_fallback_rate": 0.017773892773892772,
+      "full_fallback_invoices": 57,
+      "full_fallback_rate": 0.016608391608391608,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 307,
+      "known_target_combined_hit_rate_at_5": 0.09884095299420477,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.055416643301116966,
+        0.07708374495092021
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 24,
+          "combined_hit_rate_at_5": 0.018168054504163512
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 118,
+          "combined_hit_rate_at_5": 0.10378188214599825
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 165,
+          "combined_hit_rate_at_5": 0.25462962962962965
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 15,
+          "visible_excerpt": [
+            {
+              "product": "21668",
+              "display_name": "RED STRIPE CERAMIC DRAWER KNOB"
+            },
+            {
+              "product": "21670",
+              "display_name": "BLUE SPOT CERAMIC DRAWER KNOB"
+            }
+          ],
+          "hidden_target": {
+            "product": "23034",
+            "display_name": "DRAWER KNOB CERAMIC BLACK"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "23034",
+              "display_name": "DRAWER KNOB CERAMIC BLACK",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23035",
+                "visible_display_name": "DRAWER KNOB CERAMIC IVORY",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.39655172413793105,
+                "lift": 136.31465517241378
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 30,
+                "support": 0.0027272727272727275,
+                "confidence": 0.5454545454545454,
+                "lift": 127.65957446808511
+              }
+            },
+            {
+              "product": "23033",
+              "display_name": "DRAWER KNOB CERAMIC RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23035",
+                "visible_display_name": "DRAWER KNOB CERAMIC IVORY",
+                "pair_count": 14,
+                "support": 0.0012727272727272728,
+                "confidence": 0.2413793103448276,
+                "lift": 126.4367816091954
+              }
+            },
+            {
+              "product": "22683",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 8",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 32,
+                "support": 0.002909090909090909,
+                "confidence": 0.5818181818181818,
+                "lift": 120.75471698113208
+              }
+            },
+            {
+              "product": "22678",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 3",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 37,
+                "support": 0.003363636363636364,
+                "confidence": 0.6727272727272727,
+                "lift": 115.625
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "23034",
+              "display_name": "DRAWER KNOB CERAMIC BLACK",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23035",
+                "visible_display_name": "DRAWER KNOB CERAMIC IVORY",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.39655172413793105,
+                "lift": 136.31465517241378
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 30,
+                "support": 0.0027272727272727275,
+                "confidence": 0.5454545454545454,
+                "lift": 127.65957446808511
+              }
+            },
+            {
+              "product": "23033",
+              "display_name": "DRAWER KNOB CERAMIC RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23035",
+                "visible_display_name": "DRAWER KNOB CERAMIC IVORY",
+                "pair_count": 14,
+                "support": 0.0012727272727272728,
+                "confidence": 0.2413793103448276,
+                "lift": 126.4367816091954
+              }
+            },
+            {
+              "product": "22683",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 8",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 32,
+                "support": 0.002909090909090909,
+                "confidence": 0.5818181818181818,
+                "lift": 120.75471698113208
+              }
+            },
+            {
+              "product": "22678",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 3",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22685",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+                "pair_count": 37,
+                "support": 0.003363636363636364,
+                "confidence": 0.6727272727272727,
+                "lift": 115.625
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84691",
+              "display_name": "PACK 20 DOLLY PEGS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.10344827586206896,
+                "lift": 284.48275862068965
+              }
+            },
+            {
+              "product": "18098c",
+              "display_name": "PORCELAIN BUTTERFLY OIL BURNER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22414",
+                "visible_display_name": "DOORMAT NEIGHBOURHOOD WITCH",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.06818181818181818,
+                "lift": 150.0
+              }
+            },
+            {
+              "product": "84508C",
+              "display_name": "BLUE CIRCLES DESIGN TEDDY",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 4,
+                "support": 0.0003636363636363636,
+                "confidence": 0.13793103448275862,
+                "lift": 126.4367816091954
+              }
+            },
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84691",
+              "display_name": "PACK 20 DOLLY PEGS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.10344827586206896,
+                "lift": 284.48275862068965
+              }
+            },
+            {
+              "product": "18098c",
+              "display_name": "PORCELAIN BUTTERFLY OIL BURNER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22414",
+                "visible_display_name": "DOORMAT NEIGHBOURHOOD WITCH",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.06818181818181818,
+                "lift": 150.0
+              }
+            },
+            {
+              "product": "84508C",
+              "display_name": "BLUE CIRCLES DESIGN TEDDY",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 4,
+                "support": 0.0003636363636363636,
+                "confidence": 0.13793103448275862,
+                "lift": 126.4367816091954
+              }
+            },
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20894",
+              "display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE"
+            }
+          ],
+          "hidden_target": {
+            "product": "20893",
+            "display_name": "HANGING BAUBLE T-LIGHT HOLDER SMALL"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            },
+            {
+              "product": "22423",
+              "display_name": "REGENCY CAKESTAND 3 TIER",
+              "source": "popularity"
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "popularity"
+            },
+            {
+              "product": "47566",
+              "display_name": "PARTY BUNTING",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count3_lift_sum",
+      "min_pair_count": 3,
+      "score": "lift",
+      "aggregation": "sum",
+      "denominator": 3432,
+      "combined_hits": 367,
+      "combined_hit_rate_at_5": 0.10693473193473194,
+      "difference_from_popularity": 0.0844988344988345,
+      "association_only_hits": 367,
+      "association_only_hit_rate_at_5": 0.10693473193473194,
+      "association_coverage_invoices": 3375,
+      "association_coverage": 0.9833916083916084,
+      "full_five_association_invoices": 3371,
+      "any_fallback_invoices": 61,
+      "any_fallback_rate": 0.017773892773892772,
+      "full_fallback_invoices": 57,
+      "full_fallback_rate": 0.016608391608391608,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 367,
+      "known_target_combined_hit_rate_at_5": 0.11815840309079202,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.07184437751924982,
+        0.09638787886602368
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 45,
+          "combined_hit_rate_at_5": 0.03406510219530658
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 157,
+          "combined_hit_rate_at_5": 0.13808267370272648
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 165,
+          "combined_hit_rate_at_5": 0.25462962962962965
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "23347",
+              "display_name": "I LOVE LONDON BEAKER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 6,
+                "support": 0.0005454545454545455,
+                "confidence": 0.05454545454545454,
+                "lift": 23.076923076923077
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "23005",
+              "display_name": "TRAVEL CARD WALLET I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 9,
+                "support": 0.0008181818181818182,
+                "confidence": 0.08181818181818182,
+                "lift": 12.67605633802817
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "23347",
+              "display_name": "I LOVE LONDON BEAKER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 6,
+                "support": 0.0005454545454545455,
+                "confidence": 0.05454545454545454,
+                "lift": 23.076923076923077
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "23005",
+              "display_name": "TRAVEL CARD WALLET I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 9,
+                "support": 0.0008181818181818182,
+                "confidence": 0.08181818181818182,
+                "lift": 12.67605633802817
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84691",
+              "display_name": "PACK 20 DOLLY PEGS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.10344827586206896,
+                "lift": 284.48275862068965
+              }
+            },
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22679",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 4",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 81.69014084507042
+              }
+            },
+            {
+              "product": "22682",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 7",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 45,
+                "support": 0.004090909090909091,
+                "confidence": 0.46875,
+                "lift": 83.16532258064517
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84691",
+              "display_name": "PACK 20 DOLLY PEGS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "84508A",
+                "visible_display_name": "CAMOUFLAGE DESIGN TEDDY",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 0.10344827586206896,
+                "lift": 284.48275862068965
+              }
+            },
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22679",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 4",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 81.69014084507042
+              }
+            },
+            {
+              "product": "22682",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 7",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 45,
+                "support": 0.004090909090909091,
+                "confidence": 0.46875,
+                "lift": 83.16532258064517
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20894",
+              "display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE"
+            }
+          ],
+          "hidden_target": {
+            "product": "20893",
+            "display_name": "HANGING BAUBLE T-LIGHT HOLDER SMALL"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "21034",
+              "display_name": "REX CASH+CARRY JUMBO SHOPPER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20894",
+                "visible_display_name": "HANGING BAUBLE T-LIGHT HOLDER LARGE",
+                "pair_count": 3,
+                "support": 0.00027272727272727274,
+                "confidence": 1.0,
+                "lift": 23.605150214592275
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            },
+            {
+              "product": "22423",
+              "display_name": "REGENCY CAKESTAND 3 TIER",
+              "source": "popularity"
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "popularity"
+            },
+            {
+              "product": "47566",
+              "display_name": "PARTY BUNTING",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count10_confidence_maximum",
+      "min_pair_count": 10,
+      "score": "confidence",
+      "aggregation": "maximum",
+      "denominator": 3432,
+      "combined_hits": 701,
+      "combined_hit_rate_at_5": 0.20425407925407926,
+      "difference_from_popularity": 0.18181818181818182,
+      "association_only_hits": 701,
+      "association_only_hit_rate_at_5": 0.20425407925407926,
+      "association_coverage_invoices": 3347,
+      "association_coverage": 0.9752331002331003,
+      "full_five_association_invoices": 3317,
+      "any_fallback_invoices": 115,
+      "any_fallback_rate": 0.03350815850815851,
+      "full_fallback_invoices": 85,
+      "full_fallback_rate": 0.024766899766899768,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 701,
+      "known_target_combined_hit_rate_at_5": 0.22569220862846104,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.1672055729428891,
+        0.1959853748944343
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 394,
+          "combined_hit_rate_at_5": 0.2982588947766843
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 262,
+          "combined_hit_rate_at_5": 0.23043095866314864
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 45,
+          "combined_hit_rate_at_5": 0.06944444444444445
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22386",
+                "visible_display_name": "JUMBO BAG PINK POLKADOT",
+                "pair_count": 501,
+                "support": 0.04554545454545455,
+                "confidence": 0.6706827309236948,
+                "lift": 6.34351680151388
+              }
+            },
+            {
+              "product": "22677",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 2",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 36,
+                "support": 0.0032727272727272726,
+                "confidence": 0.6545454545454545,
+                "lift": 78.26086956521739
+              }
+            },
+            {
+              "product": "22996",
+              "display_name": "TRAVEL CARD WALLET VINTAGE TICKET",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22994",
+                "visible_display_name": "TRAVEL CARD WALLET RETROSPOT",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.5795454545454546,
+                "lift": 34.45945945945946
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22662",
+                "visible_display_name": "LUNCH BAG DOLLY GIRL DESIGN",
+                "pair_count": 229,
+                "support": 0.02081818181818182,
+                "confidence": 0.5753768844221105,
+                "lift": 9.858482443369496
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22384",
+                "visible_display_name": "LUNCH BAG PINK POLKADOT",
+                "pair_count": 371,
+                "support": 0.03372727272727273,
+                "confidence": 0.5553892215568862,
+                "lift": 6.611776447105789
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22386",
+                "visible_display_name": "JUMBO BAG PINK POLKADOT",
+                "pair_count": 501,
+                "support": 0.04554545454545455,
+                "confidence": 0.6706827309236948,
+                "lift": 6.34351680151388
+              }
+            },
+            {
+              "product": "22677",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 2",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 36,
+                "support": 0.0032727272727272726,
+                "confidence": 0.6545454545454545,
+                "lift": 78.26086956521739
+              }
+            },
+            {
+              "product": "22996",
+              "display_name": "TRAVEL CARD WALLET VINTAGE TICKET",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22994",
+                "visible_display_name": "TRAVEL CARD WALLET RETROSPOT",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.5795454545454546,
+                "lift": 34.45945945945946
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22662",
+                "visible_display_name": "LUNCH BAG DOLLY GIRL DESIGN",
+                "pair_count": 229,
+                "support": 0.02081818181818182,
+                "confidence": 0.5753768844221105,
+                "lift": 9.858482443369496
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22384",
+                "visible_display_name": "LUNCH BAG PINK POLKADOT",
+                "pair_count": 371,
+                "support": 0.03372727272727273,
+                "confidence": 0.5553892215568862,
+                "lift": 6.611776447105789
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "22943",
+              "display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES"
+            }
+          ],
+          "hidden_target": {
+            "product": "20979",
+            "display_name": "36 PENCILS TUBE RED RETROSPOT"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count10_confidence_sum",
+      "min_pair_count": 10,
+      "score": "confidence",
+      "aggregation": "sum",
+      "denominator": 3432,
+      "combined_hits": 422,
+      "combined_hit_rate_at_5": 0.12296037296037296,
+      "difference_from_popularity": 0.10052447552447552,
+      "association_only_hits": 422,
+      "association_only_hit_rate_at_5": 0.12296037296037296,
+      "association_coverage_invoices": 3347,
+      "association_coverage": 0.9752331002331003,
+      "full_five_association_invoices": 3317,
+      "any_fallback_invoices": 115,
+      "any_fallback_rate": 0.03350815850815851,
+      "full_fallback_invoices": 85,
+      "full_fallback_rate": 0.024766899766899768,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 422,
+      "known_target_combined_hit_rate_at_5": 0.13586606567933032,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.08871365448107309,
+        0.11213046570598058
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 305,
+          "combined_hit_rate_at_5": 0.23088569265707798
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 103,
+          "combined_hit_rate_at_5": 0.09058927000879508
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 14,
+          "combined_hit_rate_at_5": 0.021604938271604937
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "20675",
+              "display_name": "BLUE POLKADOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 131,
+                "support": 0.011909090909090909,
+                "confidence": 0.6968085106382979,
+                "lift": 38.13379908965809
+              }
+            },
+            {
+              "product": "21239",
+              "display_name": "PINK POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 104,
+                "support": 0.009454545454545455,
+                "confidence": 0.5531914893617021,
+                "lift": 33.43465045592705
+              }
+            },
+            {
+              "product": "20676",
+              "display_name": "RED RETROSPOT BOWL",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 20.754716981132077
+              }
+            },
+            {
+              "product": "21240",
+              "display_name": "BLUE POLKADOT CUP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 94,
+                "support": 0.008545454545454545,
+                "confidence": 0.5,
+                "lift": 26.829268292682926
+              }
+            },
+            {
+              "product": "21243",
+              "display_name": "PINK POLKADOT PLATE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 90,
+                "support": 0.008181818181818182,
+                "confidence": 0.4787234042553192,
+                "lift": 40.82137555665512
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.19672131147540983,
+                "lift": 2.34192037470726
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "20725",
+              "display_name": "LUNCH BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.19672131147540983,
+                "lift": 2.34192037470726
+              }
+            },
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22659",
+                "visible_display_name": "LUNCH BOX I LOVE LONDON",
+                "pair_count": 142,
+                "support": 0.012909090909090908,
+                "confidence": 0.3488943488943489,
+                "lift": 7.584659758572802
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "22943",
+              "display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES"
+            }
+          ],
+          "hidden_target": {
+            "product": "20979",
+            "display_name": "36 PENCILS TUBE RED RETROSPOT"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 48,
+          "visible_excerpt": [
+            {
+              "product": "11001",
+              "display_name": "ASSTD DESIGN RACING CAR PEN"
+            },
+            {
+              "product": "15036",
+              "display_name": "ASSORTED COLOURS SILK FAN"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "85099B",
+            "47566",
+            "20725",
+            "22383"
+          ],
+          "association_top_five": [
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23346",
+                "visible_display_name": "SPACEBOY BEAKER",
+                "pair_count": 24,
+                "support": 0.002181818181818182,
+                "confidence": 0.5333333333333333,
+                "lift": 11.594202898550725
+              }
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22378",
+                "visible_display_name": "WALL TIDY RETROSPOT",
+                "pair_count": 38,
+                "support": 0.0034545454545454545,
+                "confidence": 0.3584905660377358,
+                "lift": 3.39071042684015
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 6.561940743686618
+              }
+            },
+            {
+              "product": "22630",
+              "display_name": "DOLLY GIRL LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.48936170212765956,
+                "lift": 12.151193506555881
+              }
+            },
+            {
+              "product": "23209",
+              "display_name": "LUNCH BAG DOILEY PATTERN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 7.659574468085107
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22629",
+              "display_name": "SPACEBOY LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23346",
+                "visible_display_name": "SPACEBOY BEAKER",
+                "pair_count": 24,
+                "support": 0.002181818181818182,
+                "confidence": 0.5333333333333333,
+                "lift": 11.594202898550725
+              }
+            },
+            {
+              "product": "85099B",
+              "display_name": "JUMBO BAG RED RETROSPOT",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22378",
+                "visible_display_name": "WALL TIDY RETROSPOT",
+                "pair_count": 38,
+                "support": 0.0034545454545454545,
+                "confidence": 0.3584905660377358,
+                "lift": 3.39071042684015
+              }
+            },
+            {
+              "product": "22382",
+              "display_name": "LUNCH BAG SPACEBOY DESIGN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 6.561940743686618
+              }
+            },
+            {
+              "product": "22630",
+              "display_name": "DOLLY GIRL LUNCH BOX",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.48936170212765956,
+                "lift": 12.151193506555881
+              }
+            },
+            {
+              "product": "23209",
+              "display_name": "LUNCH BAG DOILEY PATTERN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23345",
+                "visible_display_name": "DOLLY GIRL BEAKER",
+                "pair_count": 18,
+                "support": 0.0016363636363636363,
+                "confidence": 0.3829787234042553,
+                "lift": 7.659574468085107
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count10_lift_maximum",
+      "min_pair_count": 10,
+      "score": "lift",
+      "aggregation": "maximum",
+      "denominator": 3432,
+      "combined_hits": 402,
+      "combined_hit_rate_at_5": 0.11713286713286714,
+      "difference_from_popularity": 0.0946969696969697,
+      "association_only_hits": 402,
+      "association_only_hit_rate_at_5": 0.11713286713286714,
+      "association_coverage_invoices": 3347,
+      "association_coverage": 0.9752331002331003,
+      "full_five_association_invoices": 3317,
+      "any_fallback_invoices": 115,
+      "any_fallback_rate": 0.03350815850815851,
+      "full_fallback_invoices": 85,
+      "full_fallback_rate": 0.024766899766899768,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 402,
+      "known_target_combined_hit_rate_at_5": 0.12942691564713457,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.08143901041554348,
+        0.10753911806543386
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 59,
+          "combined_hit_rate_at_5": 0.04466313398940197
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 243,
+          "combined_hit_rate_at_5": 0.21372031662269128
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 100,
+          "combined_hit_rate_at_5": 0.15432098765432098
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            },
+            {
+              "product": "23307",
+              "display_name": "SET OF 60 PANTRY DESIGN CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 51,
+                "support": 0.004636363636363636,
+                "confidence": 0.4636363636363636,
+                "lift": 23.28767123287671
+              }
+            },
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22681",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 6",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 28,
+                "support": 0.0025454545454545456,
+                "confidence": 0.509090909090909,
+                "lift": 93.33333333333333
+              }
+            },
+            {
+              "product": "22678",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 3",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 28,
+                "support": 0.0025454545454545456,
+                "confidence": 0.509090909090909,
+                "lift": 87.5
+              }
+            },
+            {
+              "product": "22683",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 8",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 40,
+                "support": 0.0036363636363636364,
+                "confidence": 0.4166666666666667,
+                "lift": 86.47798742138365
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22681",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 6",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 28,
+                "support": 0.0025454545454545456,
+                "confidence": 0.509090909090909,
+                "lift": 93.33333333333333
+              }
+            },
+            {
+              "product": "22678",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 3",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 28,
+                "support": 0.0025454545454545456,
+                "confidence": 0.509090909090909,
+                "lift": 87.5
+              }
+            },
+            {
+              "product": "22683",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 8",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 40,
+                "support": 0.0036363636363636364,
+                "confidence": 0.4166666666666667,
+                "lift": 86.47798742138365
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "22943",
+              "display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES"
+            }
+          ],
+          "hidden_target": {
+            "product": "20979",
+            "display_name": "36 PENCILS TUBE RED RETROSPOT"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "count10_lift_sum",
+      "min_pair_count": 10,
+      "score": "lift",
+      "aggregation": "sum",
+      "denominator": 3432,
+      "combined_hits": 463,
+      "combined_hit_rate_at_5": 0.1349067599067599,
+      "difference_from_popularity": 0.11247086247086246,
+      "association_only_hits": 463,
+      "association_only_hit_rate_at_5": 0.1349067599067599,
+      "association_coverage_invoices": 3347,
+      "association_coverage": 0.9752331002331003,
+      "full_five_association_invoices": 3317,
+      "any_fallback_invoices": 115,
+      "any_fallback_rate": 0.03350815850815851,
+      "full_fallback_invoices": 85,
+      "full_fallback_rate": 0.024766899766899768,
+      "fewer_than_five_invoices": 0,
+      "known_target_combined_hits": 463,
+      "known_target_combined_hit_rate_at_5": 0.14906632324533162,
+      "paired_cluster_bootstrap_95pct_difference": [
+        0.09827061204043719,
+        0.125329111741128
+      ],
+      "by_target_group": {
+        "head": {
+          "invoices": 1321,
+          "combined_hits": 108,
+          "combined_hit_rate_at_5": 0.0817562452687358
+        },
+        "middle": {
+          "invoices": 1137,
+          "combined_hits": 265,
+          "combined_hit_rate_at_5": 0.23306948109058928
+        },
+        "tail": {
+          "invoices": 648,
+          "combined_hits": 90,
+          "combined_hit_rate_at_5": 0.1388888888888889
+        },
+        "unseen": {
+          "invoices": 326,
+          "combined_hits": 0,
+          "combined_hit_rate_at_5": 0.0
+        }
+      },
+      "examples": {
+        "both_miss": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "20677",
+              "display_name": "PINK POLKADOT BOWL"
+            }
+          ],
+          "hidden_target": {
+            "product": "22128",
+            "display_name": "PARTY CONES CANDY ASSORTED"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "84997c",
+              "display_name": "CHILDRENS CUTLERY POLKADOT BLUE",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "85049g",
+              "display_name": "CHOCOLATE BOX RIBBONS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 55.96669750231268
+              }
+            },
+            {
+              "product": "84989a",
+              "display_name": "75 GREEN FAIRY CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 17,
+                "support": 0.0015454545454545454,
+                "confidence": 0.09042553191489362,
+                "lift": 55.26004728132388
+              }
+            },
+            {
+              "product": "84997b",
+              "display_name": "CHILDRENS CUTLERY RETROSPOT RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 22,
+                "support": 0.002,
+                "confidence": 0.11702127659574468,
+                "lift": 53.63475177304964
+              }
+            },
+            {
+              "product": "48189",
+              "display_name": "DOORMAT FRIENDSHIP",
+              "source": "association",
+              "evidence": {
+                "visible_product": "20677",
+                "visible_display_name": "PINK POLKADOT BOWL",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.05319148936170213,
+                "lift": 53.191489361702125
+              }
+            }
+          ]
+        },
+        "association_success_baseline_miss": {
+          "visible_product_count": 5,
+          "visible_excerpt": [
+            {
+              "product": "22616",
+              "display_name": "PACK OF 12 LONDON TISSUES"
+            },
+            {
+              "product": "22659",
+              "display_name": "LUNCH BOX I LOVE LONDON"
+            }
+          ],
+          "hidden_target": {
+            "product": "22970",
+            "display_name": "LONDON BUS COFFEE MUG"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22970",
+              "display_name": "LONDON BUS COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 20,
+                "support": 0.0018181818181818182,
+                "confidence": 0.32786885245901637,
+                "lift": 20.376030378808927
+              }
+            },
+            {
+              "product": "22971",
+              "display_name": "QUEENS GUARD COFFEE MUG",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22988",
+                "visible_display_name": "SOLDIERS EGG CUP",
+                "pair_count": 58,
+                "support": 0.005272727272727273,
+                "confidence": 0.29292929292929293,
+                "lift": 20.013802622498275
+              }
+            },
+            {
+              "product": "22900",
+              "display_name": "SET 2 TEA TOWELS I LOVE LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22902",
+                "visible_display_name": "TOTE BAG I LOVE LONDON",
+                "pair_count": 25,
+                "support": 0.0022727272727272726,
+                "confidence": 0.4098360655737705,
+                "lift": 14.927803712951905
+              }
+            },
+            {
+              "product": "23238",
+              "display_name": "SET OF 4 KNICK KNACK TINS LONDON",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 21,
+                "support": 0.0019090909090909091,
+                "confidence": 0.19090909090909092,
+                "lift": 19.444444444444443
+              }
+            },
+            {
+              "product": "23308",
+              "display_name": "SET OF 60 VINTAGE LEAF CAKE CASES",
+              "source": "association",
+              "evidence": {
+                "visible_product": "23309",
+                "visible_display_name": "SET OF 60 I LOVE LONDON CAKE CASES",
+                "pair_count": 41,
+                "support": 0.003727272727272727,
+                "confidence": 0.37272727272727274,
+                "lift": 28.87323943661972
+              }
+            }
+          ]
+        },
+        "baseline_success_combined_miss": {
+          "visible_product_count": 42,
+          "visible_excerpt": [
+            {
+              "product": "15056N",
+              "display_name": "EDWARDIAN PARASOL NATURAL"
+            },
+            {
+              "product": "20685",
+              "display_name": "DOORMAT RED RETROSPOT"
+            }
+          ],
+          "hidden_target": {
+            "product": "47566",
+            "display_name": "PARTY BUNTING"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22680",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 5",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 52,
+                "support": 0.0047272727272727275,
+                "confidence": 0.5416666666666666,
+                "lift": 77.38095238095238
+              }
+            },
+            {
+              "product": "22679",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 4",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 81.69014084507042
+              }
+            },
+            {
+              "product": "22682",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 7",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 45,
+                "support": 0.004090909090909091,
+                "confidence": 0.46875,
+                "lift": 83.16532258064517
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22685",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 0",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 105.45454545454545
+              }
+            },
+            {
+              "product": "22684",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 9",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 23,
+                "support": 0.0020909090909090908,
+                "confidence": 0.41818181818181815,
+                "lift": 97.87234042553192
+              }
+            },
+            {
+              "product": "22680",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 5",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 52,
+                "support": 0.0047272727272727275,
+                "confidence": 0.5416666666666666,
+                "lift": 77.38095238095238
+              }
+            },
+            {
+              "product": "22679",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 4",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22686",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN No",
+                "pair_count": 29,
+                "support": 0.0026363636363636363,
+                "confidence": 0.5272727272727272,
+                "lift": 81.69014084507042
+              }
+            },
+            {
+              "product": "22682",
+              "display_name": "FRENCH BLUE METAL DOOR SIGN 7",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22676",
+                "visible_display_name": "FRENCH BLUE METAL DOOR SIGN 1",
+                "pair_count": 45,
+                "support": 0.004090909090909091,
+                "confidence": 0.46875,
+                "lift": 83.16532258064517
+              }
+            }
+          ]
+        },
+        "fallback_used": {
+          "visible_product_count": 1,
+          "visible_excerpt": [
+            {
+              "product": "22943",
+              "display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES"
+            }
+          ],
+          "hidden_target": {
+            "product": "20979",
+            "display_name": "36 PENCILS TUBE RED RETROSPOT"
+          },
+          "baseline_top_five": [
+            "85123A",
+            "22423",
+            "85099B",
+            "47566",
+            "20725"
+          ],
+          "association_top_five": [
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            }
+          ],
+          "combined_top_five": [
+            {
+              "product": "22941",
+              "display_name": "CHRISTMAS LIGHTS 10 REINDEER",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 51.24223602484472
+              }
+            },
+            {
+              "product": "22910",
+              "display_name": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 11,
+                "support": 0.001,
+                "confidence": 0.19642857142857142,
+                "lift": 14.599420849420849
+              }
+            },
+            {
+              "product": "22726",
+              "display_name": "ALARM CLOCK BAKELIKE GREEN",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 10,
+                "support": 0.0009090909090909091,
+                "confidence": 0.17857142857142858,
+                "lift": 4.526003949967084
+              }
+            },
+            {
+              "product": "22727",
+              "display_name": "ALARM CLOCK BAKELIKE RED",
+              "source": "association",
+              "evidence": {
+                "visible_product": "22943",
+                "visible_display_name": "CHRISTMAS LIGHTS 10 VINTAGE BAUBLES",
+                "pair_count": 12,
+                "support": 0.001090909090909091,
+                "confidence": 0.21428571428571427,
+                "lift": 4.464285714285714
+              }
+            },
+            {
+              "product": "85123A",
+              "display_name": "WHITE HANGING HEART T-LIGHT HOLDER",
+              "source": "popularity"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "best_association_setting_by_approved_tie_break": "count3_confidence_maximum",
+  "sensitivity": {
+    "setting": "count3_confidence_maximum",
+    "training_baskets": 11250,
+    "training_distinct_pairs": 1858924,
+    "validation": {
+      "common_under_100": {
+        "invoices": 3432,
+        "baseline_hits": 76,
+        "combined_hits": 682
+      },
+      "additional_100_to_199": {
+        "invoices": 86,
+        "baseline_hits": 2,
+        "combined_hits": 8
+      }
+    }
+  }
+}
