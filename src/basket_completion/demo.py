@@ -14,7 +14,6 @@ from .prepare import ROOT
 
 FROZEN_SETTING = Setting(3, "confidence", "maximum")
 DEPLOY_DB = ROOT / "data/deploy/training.sqlite"
-REVIEWED_REPORT = ROOT / "reports/test_results.md"
 REVIEWED_METRICS_SHA256 = "687678e420c00f4d4a0a6ddfd46b9b83d3fc6c07dd0031252a8325b00d0c2758"
 
 
@@ -143,8 +142,6 @@ def basket_for_url(basket: MutableMapping[str, int]) -> str:
 
 def load_saved_results() -> dict:
     """Read verified aggregate results for display; never score test baskets here."""
-    if not REVIEWED_REPORT.is_file():
-        raise FileNotFoundError(f"Reviewed report missing: {REVIEWED_REPORT}")
     if hashlib.sha256(METRICS_PATH.read_bytes()).hexdigest() != REVIEWED_METRICS_SHA256:
         raise RuntimeError("Saved test metrics differ from the reviewed run")
     frozen = json.loads(FREEZE_PATH.read_text(encoding="utf-8"))

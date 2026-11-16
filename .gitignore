@@ -26,6 +26,11 @@ reports/figures/*.svg
 /context.md
 /docs/PROGRESS.md
 /docs/UI_HANDOFF.md
+/docs/DECISIONS.md
+/reports/test_results.md
+/reports/data_audit.md
+/reports/questionable_product_codes.csv
+/reports/final_test_results.md
 *.log
 .env
 .env.*

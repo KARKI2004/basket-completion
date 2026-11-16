@@ -2,13 +2,13 @@
 
 Basket Completion compares product suggestions based on historical co-purchases with a simple popularity baseline. It uses the public UCI Online Retail dataset and includes an offline evaluation and a local Streamlit demo. The demo reads the frozen training catalog and saved results; it does not retrain the model.
 
-On 3,205 later test orders, the co-purchase method recovered a hidden product among its top five suggestions in **18.38%** of cases, compared with **2.00%** for popular products. See the [reviewed results](reports/test_results.md) for denominators, uncertainty, coverage, and the prespecified larger-order sensitivity.
+On 3,205 later test orders, the co-purchase method recovered a hidden product among its top five suggestions in **18.38%** of cases, compared with **2.00%** for popular products. The app displays the saved results, including uncertainty, coverage, and the larger-order sensitivity.
 
 ## Data and scope
 
 The source is Chen, D. (2015). *Online Retail* [Dataset]. UCI Machine Learning Repository. [Dataset page](https://archive.ics.uci.edu/dataset/352/online-retail) · [DOI](https://doi.org/10.24432/C5BW33) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The project cleans and transforms the original transaction lines into product sets for each order.
 
-The primary study uses orders with 2–99 distinct eligible products. Catalog names, product popularity, and co-purchase evidence come only from training orders. Validation selected a fixed method: at least three shared training orders, directional confidence, and the strongest qualifying cart-product relationship. Popular products fill remaining suggestion slots. For evaluation, one product is hidden from each eligible later order and counted as a hit if it appears in the top five suggestions. The [evaluation policy](docs/EVALUATION_SPEC.md), [selection record](docs/DECISIONS.md), and [frozen file hashes](docs/frozen_config.json) document the rules.
+The primary study uses orders with 2–99 distinct eligible products. Catalog names, product popularity, and co-purchase evidence come only from training orders. Validation selected a fixed method: at least three shared training orders, directional confidence, and the strongest qualifying cart-product relationship. Popular products fill remaining suggestion slots. For evaluation, one product is hidden from each eligible later order and counted as a hit if it appears in the top five suggestions. The [evaluation policy](docs/EVALUATION_SPEC.md) and [frozen file hashes](docs/frozen_config.json) document the rules.
 
 ## Setup
 

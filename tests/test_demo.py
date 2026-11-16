@@ -110,9 +110,6 @@ class DemoServiceTests(unittest.TestCase):
         with patch("basket_completion.demo.DEPLOY_DB", Path(self.temp.name) / "missing.sqlite"):
             with self.assertRaisesRegex(FileNotFoundError, "Run `python -m basket_completion.export_demo`"):
                 DemoService.from_frozen()
-        with patch("basket_completion.demo.REVIEWED_REPORT", Path(self.temp.name) / "missing.md"):
-            with self.assertRaises(FileNotFoundError):
-                load_saved_results()
 
 
 if __name__ == "__main__":
