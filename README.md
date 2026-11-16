@@ -20,11 +20,12 @@ source .venv/bin/activate
 python -m pip install -e '.[demo]'
 python -m basket_completion.prepare
 python -m basket_completion.validation
+python -m basket_completion.export_demo
 python -m unittest discover -s tests -q
 python -m streamlit run app/main.py
 ```
 
-Preparation and validation rebuild the ignored SQLite databases from the source workbook. The app verifies those files against the frozen hash manifest; use the original workbook and keep the generated databases in `data/processed/`. Figures and reviewed aggregate reports are included in this repository. To regenerate the figures, install the optional `figures` extra and run `python reports/figures/build_final_charts.py`.
+Preparation and validation rebuild the ignored SQLite databases from the source workbook. The export command verifies the frozen hashes and writes a compact training-only database and manifest to `data/deploy/`. Commit those two files for Streamlit Community Cloud. The app reads those artifacts and the saved aggregate reports; it does not need the workbook or processed databases at startup. Set the Streamlit entrypoint to `app/main.py`. `requirements.txt` supplies cloud dependencies. To regenerate figures, install the optional `figures` extra and run `python reports/figures/build_final_charts.py`.
 
 ## Demo
 
@@ -32,4 +33,4 @@ Preparation and validation rebuild the ignored SQLite databases from the source 
 
 ## Limitations
 
-This is offline reconstruction of gift-retail orders, not a measurement of sales impact or product compatibility. Co-purchases can reflect substitutes or similar variants. Products absent from the training catalog cannot be recovered, and the later test period differs seasonally from training. The demo requires the original workbook and generated databases locally; the raw data and SQLite files are intentionally excluded from Git.
+This is offline reconstruction of gift-retail orders, not a measurement of sales impact or product compatibility. Co-purchases can reflect substitutes or similar variants. Products absent from the training catalog cannot be recovered, and the later test period differs seasonally from training. The raw workbook and processed databases remain excluded from Git; the deployment database contains only catalog counts and qualifying aggregate pair evidence.

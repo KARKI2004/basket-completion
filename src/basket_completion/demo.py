@@ -9,10 +9,11 @@ from pathlib import Path
 from typing import MutableMapping
 
 from .association import AssociationResult, PairEvidence, Setting, pair_rows_for_visible, recommend_from_rows
-from .final_test import FREEZE_PATH, METRICS_PATH, verify_freeze
-from .prepare import DB_PATH, ROOT
+from .final_test import FREEZE_PATH, METRICS_PATH
+from .prepare import ROOT
 
 FROZEN_SETTING = Setting(3, "confidence", "maximum")
+DEPLOY_DB = ROOT / "data/deploy/training.sqlite"
 REVIEWED_REPORT = ROOT / "reports/test_results.md"
 REVIEWED_METRICS_SHA256 = "687678e420c00f4d4a0a6ddfd46b9b83d3fc6c07dd0031252a8325b00d0c2758"
 
@@ -31,19 +32,29 @@ class DemoService:
 
     @classmethod
     def from_frozen(cls) -> "DemoService":
-        """Verify the recorded snapshot, then read only training-derived tables."""
-        frozen = verify_freeze()
+        """Read the compact, training-only deployment snapshot."""
+        frozen = json.loads(FREEZE_PATH.read_text(encoding="utf-8"))
         if frozen["setting"] != FROZEN_SETTING.key:
             raise RuntimeError("Demo setting differs from the Gate C freeze")
-        with sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True) as conn:
+        if not DEPLOY_DB.is_file():
+            raise FileNotFoundError(
+                f"Deployment artifact missing: {DEPLOY_DB}. "
+                "Run `python -m basket_completion.export_demo` locally and commit data/deploy/training.sqlite."
+            )
+        manifest_path = DEPLOY_DB.parent / "manifest.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"Deployment manifest missing: {manifest_path}. Re-run the export and commit it.")
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if (manifest["setting"] != frozen["setting"] or
+                manifest["source_database_sha256"] != frozen["sha256"]["data/processed/basket_completion.sqlite"] or
+                hashlib.sha256(DEPLOY_DB.read_bytes()).hexdigest() != manifest["sha256"]):
+            raise RuntimeError("Deployment artifact does not match the frozen training snapshot; re-run the export")
+        with sqlite3.connect(f"file:{DEPLOY_DB}?mode=ro", uri=True) as conn:
             rows = conn.execute("""SELECT product,display_name,basket_count FROM train_catalog
                 ORDER BY basket_count DESC,product ASC""").fetchall()
-            if not rows or conn.execute("SELECT COUNT(*) FROM train_pairs").fetchone()[0] == 0:
+            if not rows or conn.execute("SELECT COUNT(*) FROM train_directional_stats").fetchone()[0] == 0:
                 raise RuntimeError("Frozen training catalog or pair evidence is missing")
-            if conn.execute("""SELECT COUNT(*) FROM train_catalog c WHERE NOT EXISTS
-                (SELECT 1 FROM basket_items b WHERE b.split='train' AND b.product=c.product)""").fetchone()[0]:
-                raise RuntimeError("Catalog contains a non-training product")
-        return cls(DB_PATH, tuple(Product(*row) for row in rows))
+        return cls(DEPLOY_DB, tuple(Product(*row) for row in rows))
 
     @property
     def popularity(self) -> dict[str, int]:

@@ -107,8 +107,8 @@ class DemoServiceTests(unittest.TestCase):
         self.assertEqual(basket_from_url("not json", catalog), {})
 
     def test_missing_artifacts_fail_closed(self):
-        with patch("basket_completion.demo.verify_freeze", side_effect=FileNotFoundError("database missing")):
-            with self.assertRaises(FileNotFoundError):
+        with patch("basket_completion.demo.DEPLOY_DB", Path(self.temp.name) / "missing.sqlite"):
+            with self.assertRaisesRegex(FileNotFoundError, "Run `python -m basket_completion.export_demo`"):
                 DemoService.from_frozen()
         with patch("basket_completion.demo.REVIEWED_REPORT", Path(self.temp.name) / "missing.md"):
             with self.assertRaises(FileNotFoundError):

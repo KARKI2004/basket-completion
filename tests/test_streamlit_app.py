@@ -53,8 +53,7 @@ class StreamlitAppTests(unittest.TestCase):
         self.assertIn("skipped products already in the cart",report_text)
         self.assertIn("CC BY 4.0",report_text)
         self.assertTrue(any(x.label=="How I estimated uncertainty" for x in self.app.get("expander")))
-        self.assertIn("Cart-based recovery in the frozen test period",
-                      (APP_PATH.parents[1] / "reports/figures/method_comparison.svg").read_text())
+        self.assertTrue((APP_PATH.parents[1] / "reports/figures/method_comparison.png").is_file())
         next(x for x in self.app.button if x.label=="Try the demo →").click().run()
         self.assertEqual(self.app.get("segmented_control")[0].value,"Demo")
         self.assertEqual(self.app.query_params["view"],"Demo")

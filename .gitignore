@@ -16,6 +16,7 @@ data/raw/**
 data/processed/**
 reports/figures/*.svg
 *.sqlite
+!data/deploy/training.sqlite
 *.sqlite3
 *.sqlite-*
 *.db
