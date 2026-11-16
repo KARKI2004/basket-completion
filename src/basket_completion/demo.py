@@ -9,8 +9,10 @@ from pathlib import Path
 from typing import MutableMapping
 
 from .association import AssociationResult, PairEvidence, Setting, pair_rows_for_visible, recommend_from_rows
-from .final_test import FREEZE_PATH, METRICS_PATH
-from .prepare import ROOT
+
+ROOT = Path(__file__).resolve().parents[2]
+FREEZE_PATH = ROOT / "docs/frozen_config.json"
+METRICS_PATH = ROOT / "reports/final_test_metrics.json"
 
 FROZEN_SETTING = Setting(3, "confidence", "maximum")
 DEPLOY_DB = ROOT / "data/deploy/training.sqlite"

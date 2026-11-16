@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import streamlit as st
 from basket_completion.demo import DemoService, add_product, basket_for_url, basket_from_url, load_saved_results, remove_product, set_quantity
-from basket_completion.prepare import ROOT
+ROOT = Path(__file__).resolve().parents[1]
 st.set_page_config(page_title="Basket Completion", page_icon="🧺", layout="wide", initial_sidebar_state="collapsed")
 st.markdown("""<style>
 .block-container {max-width:1160px;padding-top:.7rem;padding-bottom:1.3rem;overflow-x:clip}

@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import sqlite3
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -15,6 +17,21 @@ from basket_completion.demo import (
 
 
 class DemoServiceTests(unittest.TestCase):
+    def test_deployed_service_import_does_not_require_openpyxl(self):
+        script = """import builtins
+original = builtins.__import__
+def without_workbook_reader(name, *args, **kwargs):
+    if name.startswith('openpyxl'):
+        raise ModuleNotFoundError('openpyxl unavailable')
+    return original(name, *args, **kwargs)
+builtins.__import__ = without_workbook_reader
+from basket_completion.demo import DemoService, load_saved_results
+assert DemoService.from_frozen().products
+assert load_saved_results()['primary']['invoices'] > 0
+"""
+        result = subprocess.run([sys.executable, "-c", script], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.database = Path(self.temp.name) / "toy.sqlite"

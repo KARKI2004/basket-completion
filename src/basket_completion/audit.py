@@ -9,7 +9,6 @@ import json
 from pathlib import Path
 
 import pandas as pd
-from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "data/raw/Online Retail.xlsx"
@@ -105,6 +104,8 @@ def questionable_codes(frame: pd.DataFrame) -> pd.DataFrame:
 
 
 def calculate(source: Path = SOURCE) -> tuple[dict, pd.DataFrame]:
+    from openpyxl import load_workbook
+
     before = sha256(source)
     workbook = load_workbook(source, read_only=True, data_only=True)
     sheets = [{"name": sheet.title, "rows_including_header": sheet.max_row, "columns": sheet.max_column} for sheet in workbook.worksheets]
